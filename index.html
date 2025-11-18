@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DeskFigures</title>
+    <style>
+        body { text-align:center; font-family:Arial; }
+        .pet { margin:20px; display:inline-block; }
+        button { padding:10px; font-size:16px; cursor:pointer; }
+    </style>
+</head>
+<body>
+    <h1>DeskFigures</h1>
+
+    <div class="pet">
+        <img src="stickpet1.png" alt="Pet 1" width="100"><br>
+        <button onclick="buyPet('stickpet1.exe')">Buy Pet 1</button>
+    </div>
+
+    <div class="pet">
+        <img src="stickpet2.png" alt="Pet 2" width="100"><br>
+        <button onclick="buyPet('stickpet2.exe')">Buy Pet 2</button>
+    </div>
+
+    <script>
+        function buyPet(file) {
+            alert("Thanks for buying! Your pet will download now.");
+            const link = document.createElement('a');
+            link.href = file;
+            link.download = file;
+            link.click();
+        }
+    </script>
+</body>
+</html>
